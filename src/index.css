@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial,
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  white-space: nowrap;
+  overflow-y: auto;
+  /* background-color: #1b1a24; */
+  background-image: url("https://images.unsplash.com/photo-1516410290616-fb59b7994a51?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGFyayUyMHNreSUyMHdpdGglMjBzdGFyc3xlbnwwfHwwfHx8MA%3D%3D");
+}
+
+body::-webkit-scrollbar {
+  display: none;
+
+}
+
+#cursor {
+  height: 17vh;
+  width: 17vh;
+  background-color: rgba(221, 81, 81, 0.562);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  position: fixed;
+  z-index: 6;
+}
+
+
+
+
+
+
+
+
+
+.nav {
+  height: 10%;
+  /* background-color: aquamarine; */
+  position: fixed;
+  width: 100%;
+  /* margin-bottom: 4rem; */
+  /* margin-top: 1rem; */
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  z-index: 6;
+  /* border-bottom:1px solid red ; */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  background-color: #0a090a;
+}
+
+.nav .part2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: red; */
+}
+
+.links {
+  display: flex;
+
+}
+
+.links a {
+  text-decoration: none;
+  margin-left: 3rem;
+  font-size: 1rem;
+
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.87);
+
+}
+
+.icons i {
+  margin-left: 3rem;
+  margin-right: 2rem;
+  font-size: 1rem;
+}
+
+.svg {
+  display: flex;
+
+}
+
+.svg img {
+  width: 50%;
+  border-radius: 50%;
+  height: 70%;
+}
+
+.svg .scrolled {
+  background-color: #af1212;
+}
+
+@keyframes change {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 200px;
+  }
+}
+
+
+
+.banner {
+  height: 400px;
+  /* Set a specific height for the banner */
+  width: 100vw;
+  /* Set the width of the banner to 100% of its containing element's width */
+  /* margin-top: 10%; */
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+}
+
+.banner img {
+  height: 100%;
+  /* Set a maximum height for the image inside the banner */
+  width: 100%;
+  /* Set a maximum width for the image inside the banner */
+  /* width: auto; Ensure the width adjusts proportionally to the height */
+  /* height: auto; Ensure the height adjusts proportionally to the width */
+  object-fit: cover;
+  /* Maintain aspect ratio while covering the container */
+  object-position: center;
+  /* Center the image within its containing element */
+}
+
+.info-container {
+  /* background-color: red; */
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* overflow: hidden; */
+  /* Added overflow property to prevent content overflow */
+}
+
+.info-container .part1-info {
+  min-height: 10vh;
+  /* background-color: rgb(236, 224, 224); */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: wheat;
+  font-size: 1.2rem;
+  width: 90%;
+  /* Added max-width to prevent content from exceeding parent container */
+  /* overflow: auto; */
+  /* Added overflow property to enable scrolling if content exceeds */
+  /* margin-right: 10%; */
+  /* flex-wrap: wrap; */
+}
+
+.info-container ul li {
+  list-style: circle;
+}
+
+.part2-info {
+margin-top: 8rem;
+  min-height: 10vh;
+  align-items:  center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#center {
+  width: 60%;
+  height: 60%;
+  /* background-color: red; */
+  position: absolute;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-color: lightslategray;
+  text-align: center;
+}
+#center h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-size: 4rem; */
+  line-height: 50px;
+  word-spacing: 30px;
+  padding: 100px;
+  text-align: center;
+  
+}
+
+.imgDiv {
+  width: 8%;
+  height: 20%;
+  /* background-color: yellow; */
+  position: absolute;
+  overflow: hidden;
+}
+
+.imgDiv img {
+  transform: translateY(90%);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  animation: imgAnimation;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+ 
+}
+
+@keyframes imgAnimation {
+0%{
+transform: translateY(90%);
+}
+50%{
+transform: translateY(0);
+}
+75%{
+/* transform: translateY(10%); */
+}
+100%{
+transform: translateY(100%);
+}
+}
+
+
+
+
+
+
+.carousel-inner{
+  position: relative;
+  width: 40%;
+  height: 50%;
+  overflow: hidden;
+  margin-top: 5rem;
+  border-radius: 2%;
+}
+.carousel-inner img{
+  width: 60%;
+  height: 30%;
+  background-color: yellow;
+}
+
+
+#carouselExampleIndicators{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  min-height: 60vh;
+  width: 60vw;
+  align-items: center;
+  left: 20%;
+}
+.part2-info{
+  color: white;
+  font-size: 1.2rem;
+}
+.part2-info h1{
+  color: white;
+}
+
+footer{
+  color: white;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 4rem;
+}
+.Footer ul li a{
+  color: rgb(60, 176, 211);
+  /* font-style: italic; */
+  font-weight: 600;
+  
+}
+/* media queries */
+.Footer ul li a:hover{
+  font-size: 1.1rem;
+  color: rgb(182, 166, 238);
+}
+.Footer h2{
+font-size: 1.6rem;
+}
+.footer-part1 {
+  display: flex;
+  /* flex-direction: column; */
+  /* gap: 80px; */
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-part2 ul li a{
+  color: white;
+}
+.footer-part2 p{
+  font-size: 1.2rem;
+}
+.icons{
+  height: 3rem;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
